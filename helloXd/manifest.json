@@ -17,7 +17,7 @@
    "uiEntryPoints":[
       {
          "type":"menu",
-         "label":"My Plugin",
+         "label":"Hello My XD Plugin !",
          "commandId":"myPluginCommand"
       }
    ]
