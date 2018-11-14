@@ -50,13 +50,13 @@ util.removeScaleParam = function(layerName){
 
 
 util.getImageType = function(layerName){
-    if(layerName.indexOf('.png')){
+    if(layerName.indexOf('.png') > -1){
         return application.RenditionType.PNG;
     }
     // if(layerName.indexOf('.svg')){
     //     return application.RenditionType.SVG;
     // }
-    if(layerName.indexOf('.jpg')){
+    if(layerName.indexOf('.jpg') > -1){
         return application.RenditionType.JPG;
     }
     return undefined;

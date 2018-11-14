@@ -16,6 +16,7 @@ async function exportLayer(selection) {
   for (var i = 0; i < selection.items.length; i++) {
     var item = selection.items[i];
     const layerName = item.name;
+    console.log(layerName);
     if (!util.isExportImage(layerName)) continue;
     const outputName = util.getOutputName(layerName);
     const file = await folder.createFile(outputName, { overwrite: true });
