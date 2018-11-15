@@ -16,20 +16,21 @@ async function exportLayer(selection) {
   for (var i = 0; i < selection.items.length; i++) {
     var item = selection.items[i];
     const layerName = item.name;
-    console.log(layerName);
+    
     if (!util.isExportImage(layerName)) continue;
     const outputName = util.getOutputName(layerName);
     const file = await folder.createFile(outputName, { overwrite: true });
     const type = util.getImageType(layerName);
     const scale = util.getScaleFromName(layerName);
+    const quality = util.getQualityFromName(layerName);
 
     renditions.push({
       node: item,
       outputFile: file,
       type: type,
-      scale: scale
+      scale: scale,
+      quality:quality
     })
-    
   }
 
   application.createRenditions(renditions)

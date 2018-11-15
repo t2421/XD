@@ -36,14 +36,33 @@ util.getScaleFromName = function(layerName){
     return 1;
 }
 
+
+util.getQualityFromName = function(layerName){
+    var re = /\s\d{1,3}$/;
+    var matchers = layerName.match(re);
+    
+    if(matchers){
+        let quality = matchers[0].replace(' ','');
+        return Number(quality);
+    }
+    return 1;
+}
+
 //layer名についているパラメータを削除する
 util.getOutputName = function(layerName){
     var outputName = util.removeScaleParam(layerName);
+    outputName = util.removeQualityParam(outputName);
     return outputName;
 }
 
 util.removeScaleParam = function(layerName){
     var re = /\d{1,3}%\s/;
+    var replaced = layerName.replace(re,"");
+    return replaced;
+}
+
+util.removeQualityParam = function(layerName){
+    var re = /\s\d{1,3}$/;
     var replaced = layerName.replace(re,"");
     return replaced;
 }
