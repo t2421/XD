@@ -46,15 +46,13 @@ async function exportLayer(selection) {
     })
 }
 
-function showDialog(message) {
+function showDialog(message,text) {
   let dialog;
   dialog = h("dialog",
               h("form", { method: "dialog", style: { width: 'auto', height: 'auto'} },
                   h("header",
                   h("h1",message)),
-                  h("footer",
-                      h("button", { uxpVariant: "cta", onclick(e) { dialog.close() } },"OK")
-                  )
+                  h("button", { uxpVariant: "cta", onclick(e) { dialog.close() } },"OK")
               )
           )
   document.body.appendChild(dialog);

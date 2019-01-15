@@ -40,12 +40,11 @@ util.getScaleFromName = function(layerName){
 util.getQualityFromName = function(layerName){
     var re = /\s\d{1,3}$/;
     var matchers = layerName.match(re);
-    console.log("0")
+    
     if(matchers){
         let quality = matchers[0].replace(' ','');
         return Number(quality);
     }
-    console.log("1")
     return 100;
 }
 

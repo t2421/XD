@@ -1,0 +1,21 @@
+{
+  "name" : "exportAsset",
+  "host" : {
+    "app" : "XD",
+    "minVersion" : "13.0.0"
+  },
+  "description" : "Photoshopライクなアセット出力",
+  "id" : "a5e003a8",
+  "icons" : [ {
+    "path" : "images/icon.png",
+    "width" : 96,
+    "height" : 96
+  } ],
+  "uiEntryPoints" : [ {
+    "type":"menu",
+     "label":"Export Asset",
+     "commandId":"exportAsset",
+     "shortcut":{ "mac":"Cmd+Shift+O" , "win":"Ctrl+Shift+O" }
+  } ],
+  "version" : "1.0.0"
+}

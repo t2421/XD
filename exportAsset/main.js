@@ -13,17 +13,10 @@ const os = require('os');
 const h = require("./h")
 const dialog = require('./lib/dialogs');
 
-function myPluginCommand(selection, root) {
-  // root.children.forEach(node => {
-  //  scanNode(node);
-  // })
-  // document.body.appendChild(getDialog()).showModal()
-  // showDialog();
+function exportAsset(selection, root) {
+
   exportLayer(selection);
-  // selection.items.map(node => {
-  //     console.log(node)
-  //     // scanNode(node);
-  // })
+
 }
 
 
@@ -31,6 +24,6 @@ function myPluginCommand(selection, root) {
 
 module.exports = {
   commands: {
-    myPluginCommand: myPluginCommand
+    exportAsset: exportAsset
   }
 };
